@@ -32,11 +32,8 @@ def about(message):
 
 @bot.message_handler(commands=['evidence'])
 def evidence(message):
-    try:
-        with open('images.jpg', 'rb') as image:
-            bot.send_photo(message.chat.id, photo=image, caption="I HAVE SO MANY EVIDENCES LIKE THIS SORRY I CAN'T POST EVERYTHING ON THE BOT BECAUSE THE LIMITS ARE LESS.😔😔")
-    except FileNotFoundError:
-        bot.send_message(message.chat.id, "Image not found. Please check the path.")
+    bot.send_message(message.chat.id, ("I HAVE SO MANY EVIDENCES LIKE THIS SORRY I CAN'T POST EVERYTHING ON THE BOT BECAUSE THE LIMITS ARE LESS.😔😔"))
+
 
 # Start the bot
 bot.polling(none_stop=True)
